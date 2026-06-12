@@ -1,0 +1,32 @@
+{
+  "name": "hourledger-mcp",
+  "version": "1.0.1",
+  "mcpName": "io.github.wudongjie/hourledger-mcp",
+  "description": "MCP server for calculating work hours, overtime, and gross pay — federal, California, Alaska, Colorado, and Nevada rules. Powered by hourledger.com.",
+  "keywords": ["mcp", "modelcontextprotocol", "overtime", "payroll", "timesheet", "work-hours", "calculator"],
+  "homepage": "https://hourledger.com/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wudongjie/hourledger-mcp.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "hourledger-mcp": "dist/index.js"
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "test": "vitest run",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.1.4"
+  }
+}
