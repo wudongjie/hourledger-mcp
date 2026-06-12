@@ -3,12 +3,12 @@
   "name": "io.github.wudongjie/hourledger-mcp",
   "description": "Work hours and overtime pay tools — federal, CA, AK, CO, NV rules, every rule covered by tests.",
   "websiteUrl": "https://hourledger.com/mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "hourledger-mcp",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       }

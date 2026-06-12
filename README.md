@@ -59,6 +59,10 @@ Prefer a UI? Every ruleset has a free, no-sign-up calculator at **[hourledger.co
 
 General information, not legal or payroll advice. Exemptions and local rules vary — verify disputed pay with your state labor agency or a qualified professional.
 
+## Development
+
+The pay-rules engine (`src/engine.ts` + its 27 tests) is mirrored from the HourLedger site project, where rule changes land first. `npm test` runs the full suite; `prepublishOnly` enforces tests + build before any publish.
+
 ## License
 
 MIT

@@ -7,11 +7,12 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import pkg from "../package.json";
 import { calculate, NV_DAILY_OT_RATE_CAP, type Ruleset } from "./engine";
 
 const RULESETS = ["federal", "california", "alaska", "colorado", "nevada"] as const;
 
-const server = new McpServer({ name: "hourledger", version: "1.0.0" });
+const server = new McpServer({ name: "hourledger", version: pkg.version });
 
 server.tool(
   "calculate_work_hours",
