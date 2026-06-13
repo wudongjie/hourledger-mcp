@@ -1,0 +1,13 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # The server needs no configuration — it runs entirely locally with no API keys.
+    type: object
+    required: []
+    properties: {}
+  commandFunction:
+    # Produces the CLI command Smithery uses to start the MCP over stdio.
+    |-
+    (config) => ({ command: 'npx', args: ['-y', 'hourledger-mcp'] })
